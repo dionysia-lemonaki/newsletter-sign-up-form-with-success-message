@@ -35,7 +35,7 @@ const NewsletterForm = ({
           <li>Measuring to ensure updates are a success</li>
           <li>And much more!</li>
         </ul>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} noValidate>
           <div>
             <label htmlFor={id}>Email address</label>
             {error && (
