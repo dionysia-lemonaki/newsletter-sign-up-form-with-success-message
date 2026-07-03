@@ -8,10 +8,12 @@ interface SuccessMessageProps {
 
 const SuccessMessage = ({ email, onReset }: SuccessMessageProps) => {
   return (
-    <div>
-      <img src={iconSuccess} alt="" />
-      <h2>Thanks for subscribing!</h2>
-      <p>
+    <div className="max-w-[31.5rem] bg-white rounded-4xl p-16 flex flex-col gap-8">
+      <img src={iconSuccess} alt="" width="64" height="64" />
+      <h2 className="text-[2.5rem] md:text-[3.5rem] leading-none font-bold">
+        Thanks for subscribing!
+      </h2>
+      <p className="text-base leading-[1.5] font-normal">
         A confirmation email has been sent to <strong>{email}</strong>. Please
         open it and click the button inside to confirm your subscription.
       </p>
