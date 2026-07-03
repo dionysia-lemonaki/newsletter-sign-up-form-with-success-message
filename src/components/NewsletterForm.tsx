@@ -68,7 +68,7 @@ const NewsletterForm = ({
             aria-invalid={!!error}
             aria-describedby={error ? errorId : undefined}
             placeholder="email@company.com"
-            className={`py-4 px-6 ${error ? `border-(--red) text-(--red) bg-(--red)/10` : `border-(--grey) text-(--blue-800) bg-white placeholder:text-(--blue-800) placeholder:opacity-50 focus:border-(--blue-800)`} border rounded-lg focus:outline-none`}
+            className={`py-4 px-6 ${error ? `border-(--red) text-(--red) bg-(--red)/10 focus-visible:outline-(--red)` : `border-(--grey) text-(--blue-800) bg-white placeholder:text-(--blue-800) placeholder:opacity-50 focus:border-(--blue-800) focus-visible:outline-(--blue-800)`} border rounded-lg focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-dotted`}
           />
           <Button type="submit">Subscribe to monthly newsletter</Button>
         </form>
