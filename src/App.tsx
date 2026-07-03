@@ -33,17 +33,24 @@ const App = () => {
     setIsSubmitted(true);
   };
 
+  const handleEmailChange = (value: string) => {
+    setEmail(value);
+    if (error) {
+      setError("");
+    }
+  };
+
   const handleReset = () => {
     setEmail("");
     setIsSubmitted(false);
   };
 
   return (
-    <main>
+    <main className="min-h-screen flex flex-col items-center justify-center">
       {!isSubmitted ? (
         <NewsletterForm
           email={email}
-          setEmail={setEmail}
+          onEmailChange={handleEmailChange}
           error={error}
           onSubmit={handleSubmit}
         />
